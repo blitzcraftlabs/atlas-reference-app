@@ -1,11 +1,11 @@
 import type { OperationalIdentity } from "@/lib/operations/identity";
 
-type IdentityPanelProps = {
+interface IdentityPanelProps {
   identity: OperationalIdentity;
-};
+}
 
 export function IdentityPanel({ identity }: IdentityPanelProps) {
-  const rows: Array<{ label: string; value: string }> = [
+  const rows: { label: string; value: string }[] = [
     { label: "Application", value: identity.appName },
     { label: "Version", value: identity.appVersion },
     { label: "Environment", value: identity.environment },

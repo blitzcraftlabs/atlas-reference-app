@@ -1,5 +1,5 @@
-import { ReferenceNav } from "@/components/operations/ReferenceNav";
 import { IdentityPanel } from "@/components/operations/IdentityPanel";
+import { ReferenceNav } from "@/components/operations/ReferenceNav";
 import { getOperationalIdentity } from "@/lib/operations/identity";
 
 export default function AboutPage() {

@@ -1,8 +1,9 @@
-import { Button } from "@atlas/ui";
 import Link from "next/link";
 
-import { ReferenceNav } from "@/components/operations/ReferenceNav";
+import { Button } from "@atlas/ui";
+
 import { IdentityPanel } from "@/components/operations/IdentityPanel";
+import { ReferenceNav } from "@/components/operations/ReferenceNav";
 import { ThemeHotkey } from "@/components/ThemeHotkey";
 import { getOperationalIdentity } from "@/lib/operations/identity";
 

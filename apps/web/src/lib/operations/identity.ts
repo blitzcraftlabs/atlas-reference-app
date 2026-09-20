@@ -5,14 +5,14 @@ import workspacePackage from "../../../../../package.json";
 
 import { CONTROLLED_INCIDENT_ACTIVE } from "./incident-drill";
 
-export type OperationalIdentity = {
+export interface OperationalIdentity {
   appName: string;
   appVersion: string;
   atlasBaseline: string;
   environment: string;
   gitSha: string | null;
   deploymentId: string | null;
-};
+}
 
 /**
  * Safe runtime identity for the Atlas reference consumer application.
