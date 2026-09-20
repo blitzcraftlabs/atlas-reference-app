@@ -5,7 +5,8 @@ const nextConfig = {
   transpilePackages: ["@atlas/ui"],
   reactStrictMode: true,
   poweredByHeader: false,
-  output: "standalone",
+  // Standalone output is for self-hosted/container deploys. Vercel supplies its own trace output.
+  ...(process.env.VERCEL ? {} : { output: "standalone" }),
   // Externalize pino to avoid bundling test dependencies
   serverExternalPackages: ["pino", "pino-pretty"],
   turbopack: {},
