@@ -26,7 +26,8 @@
     "api:gen": "pnpm --filter @atlas/web api:gen",
     "validate:env": "pnpm --filter @atlas/web validate:env",
     "perf:lhci": "pnpm --filter @atlas/web perf:lhci",
-    "perf:analyze": "pnpm --filter @atlas/web perf:analyze"
+    "perf:analyze": "pnpm --filter @atlas/web perf:analyze",
+    "smoke": "node scripts/smoke-production.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
