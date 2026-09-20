@@ -1,36 +1,82 @@
 # atlas-reference-app
 
-This project was generated from Atlas 1.1.0.
+Standalone **Atlas consumer reference application** used to exercise installation, CI, deployment, observability, rollback, and incident-response patterns **outside** the canonical [`blitzcraftlabs/atlas`](https://github.com/blitzcraftlabs/atlas) monorepo.
 
-The generated application stays in this repository. Atlas does not host your application.
-
-## Getting started
+This repository was generated from the **published npm package**:
 
 ```bash
-pnpm install
+pnpm dlx @blitzcraftlabs/atlas@1.1.0 init atlas-reference-app
+```
+
+**Atlas baseline:** `1.1.0` (`atlas.config.json`).
+
+## Live deployment
+
+- **Production:** https://atlas-reference-app.vercel.app
+- **Health:** https://atlas-reference-app.vercel.app/api/health
+
+## Local development
+
+```bash
+corepack pnpm@10.19.0 install
 pnpm dev
 ```
 
-## Atlas Doctor
+Production-style run:
 
-Generated projects do not include an `atlas` package script. From this directory, run Doctor with
-the published CLI:
+```bash
+pnpm build
+pnpm --filter @atlas/web start
+```
+
+## Validation
 
 ```bash
 pnpm dlx @blitzcraftlabs/atlas@1.1.0 doctor
+pnpm lint && pnpm typecheck && pnpm test && pnpm build
 ```
 
-## Continuous integration
+Browser smoke (reference repo workflow, not default consumer CI):
 
-`.github/workflows/ci.yml` is generated with this project and is source-owned afterward. It runs
-on GitHub-hosted Ubuntu, needs no repository secrets, and does not use BlitzCraft infrastructure.
-Replace it with your own GitHub, GitLab, Buildkite, or self-hosted pipeline if you prefer.
+```bash
+CI=true pnpm --filter @atlas/web test:e2e --project=chromium
+```
 
-The default workflow is the supported quality baseline (Doctor, lint, typecheck, tests, production
-build). It is not Atlas maintainer CI. Playwright E2E is omitted until you add browsers and a
-running app. Commit `pnpm-lock.yaml` after `pnpm install` so `--frozen-lockfile` succeeds.
+Production smoke (any URL):
 
-## Documentation
+```bash
+pnpm smoke -- https://atlas-reference-app.vercel.app
+```
 
-- Atlas public docs: https://github.com/blitzcraftlabs/atlas/blob/main/docs/public/README.md
-- Atlas Doctor: https://github.com/blitzcraftlabs/atlas/blob/main/docs/how-we-build/doctor.md
+## CI
+
+| Workflow | Purpose |
+| --- | --- |
+| `.github/workflows/ci.yml` | Generated consumer baseline (install, Doctor, lint, typecheck, test, build) |
+| `.github/workflows/e2e.yml` | Reference Playwright smoke (chromium) |
+| `.github/workflows/production-synthetics.yml` | Scheduled production HTTP smoke (every 30 minutes) |
+
+## Operations documentation
+
+See [`docs/operations/`](docs/operations/):
+
+- Bootstrap validation
+- Deployment & release identity
+- Observability & SLO reference targets
+- Smoke tests
+- Rollback procedure
+- Incident response runbook
+- Postmortems (including a **controlled** deployment failure drill)
+
+## Controlled incident exercise
+
+A deliberate health-check failure was deployed once, detected via smoke checks, mitigated with a Vercel deployment promote, and documented in:
+
+`docs/operations/postmortems/0001-controlled-deployment-failure.md`
+
+This is an operational drill—not a certification or formal production audit.
+
+## Relationship to Atlas
+
+- **Atlas** ships the platform package, Doctor, and scaffold defaults.
+- **This repository** owns hosting, secrets, monitoring cadence, deployment promotion, and incident ownership for the reference deployment.
