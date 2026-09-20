@@ -3,6 +3,8 @@ import { env } from "@/env/server-env";
 import atlasConfig from "../../../../../atlas.config.json";
 import workspacePackage from "../../../../../package.json";
 
+import { CONTROLLED_INCIDENT_ACTIVE } from "./incident-drill";
+
 export type OperationalIdentity = {
   appName: string;
   appVersion: string;
@@ -31,5 +33,5 @@ export function getOperationalIdentity(): OperationalIdentity {
 }
 
 export function isReferenceHealthIncidentActive(): boolean {
-  return env.REFERENCE_HEALTH_INCIDENT === true;
+  return CONTROLLED_INCIDENT_ACTIVE || env.REFERENCE_HEALTH_INCIDENT === true;
 }
