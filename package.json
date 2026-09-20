@@ -1,0 +1,38 @@
+{
+  "name": "atlas-reference-app",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "description": "Atlas application generated from Atlas 1.1.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@10.19.0",
+  "scripts": {
+    "preinstall": "node scripts/ensure-pnpm.js",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "format:check": "turbo run format:check",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:e2e": "turbo run test:e2e",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "api:gen": "pnpm --filter @atlas/web api:gen",
+    "validate:env": "pnpm --filter @atlas/web validate:env",
+    "perf:lhci": "pnpm --filter @atlas/web perf:lhci",
+    "perf:analyze": "pnpm --filter @atlas/web perf:analyze"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "globals": "^16.5.0",
+    "prettier": "3.4.2",
+    "prettier-plugin-tailwindcss": "0.6.10",
+    "turbo": "2.3.3"
+  }
+}

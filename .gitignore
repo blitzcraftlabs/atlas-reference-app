@@ -1,0 +1,80 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+.pnpm
+.pnpm-store
+
+# Forbidden lockfiles (pnpm-lock.yaml is the only allowed lockfile)
+package-lock.json
+yarn.lock
+bun.lockb
+
+# Testing
+coverage
+test-results
+playwright-report
+packages/ui/playwright-report-visual
+packages/ui/playwright-report-storybook
+apps/web/.gen-validation-*.json
+apps/web/src/features/__gen-validation-*
+apps/web/src/app/__gen-validation-*
+*.log
+
+# Next.js
+.next
+out
+
+# Performance Budgets
+.lighthouseci
+apps/web/.next/analyze
+
+# Production
+dist
+build
+storybook-static
+packages/ui/test-results
+packages/ui/.pw-webkit
+packages/ui/design-system-screenshots
+
+# Security / SBOM local output
+artifacts
+
+# Misc
+.tmp-shadcn-preset-test
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Local env files
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Generated CLI distribution assets
+packages/cli/assets
+
+# Turbo
+.turbo
+
+# IDEs
+.idea
+.vscode
+*.swp
+*.swo
+*~

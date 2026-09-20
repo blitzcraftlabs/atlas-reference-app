@@ -1,0 +1,40 @@
+# Dependencies
+node_modules
+pnpm-lock.yaml
+
+# Build outputs
+.next
+out
+dist
+build
+.turbo
+
+# Generated files
+coverage
+storybook-static
+playwright-report
+test-results
+.contentlayer
+apps/web/src/lib/api/contracts/schema.ts
+apps/reference/src/lib/api/contracts/schema.ts
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+
+# Lock files and auto-generated
+package-lock.json
+yarn.lock
+bun.lockb
+
+# Other
+*.min.js
+*.min.css
+
+# Historical production upgrade snapshots (canonical file contents, not live source)
+packages/cli/release-assets/
