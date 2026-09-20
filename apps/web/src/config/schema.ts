@@ -187,6 +187,14 @@ const referenceConfigSchema = z.object({
    * Whether deterministic reference adapters are active.
    */
   enabled: z.boolean(),
+  /**
+   * Controlled operations drill flag from server environment.
+   */
+  healthIncident: z.boolean(),
+  /**
+   * Hosting deployment identifier when provided by the platform.
+   */
+  deploymentId: z.string().optional(),
 });
 
 /**

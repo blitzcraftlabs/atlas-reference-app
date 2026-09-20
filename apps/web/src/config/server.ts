@@ -54,7 +54,7 @@ export function getServerConfig(): Config {
     app: {
       url: clientEnv.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
       env: clientEnv.NEXT_PUBLIC_APP_ENV ?? "development",
-      buildId: clientEnv.NEXT_PUBLIC_BUILD_ID,
+      buildId: serverEnv.VERCEL_GIT_COMMIT_SHA ?? clientEnv.NEXT_PUBLIC_BUILD_ID,
     },
 
     api: {
@@ -110,7 +110,9 @@ export function getServerConfig(): Config {
     },
 
     reference: {
-      enabled: false,
+      enabled: serverEnv.ATLAS_REFERENCE_MODE ?? false,
+      healthIncident: serverEnv.REFERENCE_HEALTH_INCIDENT ?? false,
+      deploymentId: serverEnv.VERCEL_DEPLOYMENT_ID,
     },
   };
 

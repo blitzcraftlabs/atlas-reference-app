@@ -5,7 +5,8 @@
     "AUTH_SESSION_SECRET",
     "REFERENCE_HEALTH_INCIDENT",
     "VERCEL_GIT_COMMIT_SHA",
-    "VERCEL_DEPLOYMENT_ID"
+    "VERCEL_DEPLOYMENT_ID",
+    "VERCEL"
   ],
   "globalDependencies": ["**/.env.*local"],
   "globalEnv": ["NODE_ENV"],

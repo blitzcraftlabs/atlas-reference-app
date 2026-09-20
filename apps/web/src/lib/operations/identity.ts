@@ -1,4 +1,4 @@
-import { env } from "@/env/server-env";
+import { getServerConfig } from "@/config/server";
 
 import atlasConfig from "../../../../../atlas.config.json";
 import workspacePackage from "../../../../../package.json";
@@ -19,19 +19,19 @@ export type OperationalIdentity = {
  * Exposes only non-secret build and deployment metadata.
  */
 export function getOperationalIdentity(): OperationalIdentity {
-  const environment =
-    process.env.NEXT_PUBLIC_APP_ENV ?? env.NODE_ENV ?? process.env.NODE_ENV ?? "development";
+  const config = getServerConfig();
 
   return {
     appName: workspacePackage.name,
     appVersion: workspacePackage.version,
     atlasBaseline: atlasConfig.platform.baseline.atlasVersion,
-    environment,
-    gitSha: process.env.VERCEL_GIT_COMMIT_SHA ?? process.env.NEXT_PUBLIC_BUILD_ID ?? null,
-    deploymentId: process.env.VERCEL_DEPLOYMENT_ID ?? null,
+    environment: config.app.env,
+    gitSha: config.app.buildId ?? null,
+    deploymentId: config.reference.deploymentId ?? null,
   };
 }
 
 export function isReferenceHealthIncidentActive(): boolean {
-  return CONTROLLED_INCIDENT_ACTIVE || env.REFERENCE_HEALTH_INCIDENT === true;
+  const config = getServerConfig();
+  return CONTROLLED_INCIDENT_ACTIVE || config.reference.healthIncident;
 }

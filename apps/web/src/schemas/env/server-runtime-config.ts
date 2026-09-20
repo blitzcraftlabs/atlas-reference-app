@@ -287,4 +287,14 @@ export const ServerEnvSchema = {
     .transform((val) => val === "true")
     .optional()
     .default("false"),
+
+  /**
+   * Vercel Git commit SHA (injected by the platform on deploy).
+   */
+  VERCEL_GIT_COMMIT_SHA: z.string().optional(),
+
+  /**
+   * Vercel deployment identifier (injected by the platform on deploy).
+   */
+  VERCEL_DEPLOYMENT_ID: z.string().optional(),
 };

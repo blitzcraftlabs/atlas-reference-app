@@ -13,6 +13,7 @@ describe("getServerEnvSchema", () => {
       LOG_LEVEL: "info",
       AUTH_SESSION_TTL_SECONDS: 604800,
       ATLAS_REFERENCE_MODE: false,
+      REFERENCE_HEALTH_INCIDENT: false,
     });
   });
 
