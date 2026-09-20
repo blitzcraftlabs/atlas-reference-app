@@ -1,5 +1,7 @@
 # atlas-reference-app
 
+**Repository:** https://github.com/blitzcraftlabs/atlas-reference-app
+
 Standalone **Atlas consumer reference application** used to exercise installation, CI, deployment, observability, rollback, and incident-response patterns **outside** the canonical [`blitzcraftlabs/atlas`](https://github.com/blitzcraftlabs/atlas) monorepo.
 
 This repository was generated from the **published npm package**:

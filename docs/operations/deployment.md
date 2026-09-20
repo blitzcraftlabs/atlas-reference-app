@@ -3,9 +3,9 @@
 ## Path
 
 ```text
-Git commit on main
-→ (GitHub CI when remote is connected)
-→ Vercel production deployment
+Git commit on main (https://github.com/blitzcraftlabs/atlas-reference-app)
+→ GitHub Actions CI / E2E
+→ Vercel production deployment (project: atlas-reference-app)
 → https://atlas-reference-app.vercel.app
 ```
 
