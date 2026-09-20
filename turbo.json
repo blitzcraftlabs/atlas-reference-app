@@ -1,5 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalPassThroughEnv": [
+    "DATABASE_URL",
+    "AUTH_SESSION_SECRET",
+    "REFERENCE_HEALTH_INCIDENT",
+    "VERCEL_GIT_COMMIT_SHA",
+    "VERCEL_DEPLOYMENT_ID"
+  ],
   "globalDependencies": ["**/.env.*local"],
   "globalEnv": ["NODE_ENV"],
   "tasks": {
