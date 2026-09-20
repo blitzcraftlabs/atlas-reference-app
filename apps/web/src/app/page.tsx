@@ -1,28 +1,40 @@
-import { Button, Kbd } from "@atlas/ui";
+import { Button } from "@atlas/ui";
+import Link from "next/link";
 
-import { LandingSelect } from "@/components/LandingSelect";
+import { ReferenceNav } from "@/components/operations/ReferenceNav";
+import { IdentityPanel } from "@/components/operations/IdentityPanel";
 import { ThemeHotkey } from "@/components/ThemeHotkey";
+import { getOperationalIdentity } from "@/lib/operations/identity";
 
 export default function HomePage() {
+  const identity = getOperationalIdentity();
+
   return (
     <>
       <ThemeHotkey />
-      <div className="flex min-h-svh p-6">
-        <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-          <div>
-            <h1 className="font-medium">Project ready!</h1>
-            <p>You may now add components and start building.</p>
-            <p>We&apos;ve already added the button component for you.</p>
-            <div className="mt-4 flex flex-col gap-4">
-              <LandingSelect />
-              <Button>Button</Button>
-            </div>
-          </div>
-          <div className="text-muted-foreground font-mono text-xs">
-            (Press <Kbd>d</Kbd> to toggle dark mode)
+      <ReferenceNav />
+      <main className="mx-auto flex max-w-3xl flex-col gap-6 p-6">
+        <div className="space-y-3 text-sm leading-relaxed">
+          <h1 className="text-lg font-medium">Atlas operations reference application</h1>
+          <p className="text-muted-foreground">
+            A production-operations reference application generated from Atlas. This repository
+            demonstrates how an external consumer scaffolds, validates, deploys, observes, and
+            recovers a real frontend service using the published Atlas platform package.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/examples">
+              <Button type="button">Browse examples</Button>
+            </Link>
+            <Link href="/about">
+              <Button type="button" variant="outline">About this app</Button>
+            </Link>
+            <Link href="/api/health">
+              <Button type="button" variant="outline">Health JSON</Button>
+            </Link>
           </div>
         </div>
-      </div>
+        <IdentityPanel identity={identity} />
+      </main>
     </>
   );
 }

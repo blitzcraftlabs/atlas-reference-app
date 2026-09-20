@@ -275,4 +275,16 @@ export const ServerEnvSchema = {
     .transform((val) => val === "true")
     .optional()
     .default("false"),
+
+  /**
+   * Controlled operations exercise: force the health endpoint to report failure.
+   * Used only for deliberate incident drills in the reference application.
+   *
+   * @default false
+   */
+  REFERENCE_HEALTH_INCIDENT: z
+    .string()
+    .transform((val) => val === "true")
+    .optional()
+    .default("false"),
 };

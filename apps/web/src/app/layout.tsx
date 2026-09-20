@@ -18,8 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Frontend Platform",
-  description: "Enterprise frontend platform built with Next.js",
+  title: "Atlas Reference App",
+  description:
+    "Standalone Atlas consumer reference application for installation, CI, deployment, and operations.",
 };
 
 export default async function RootLayout({
