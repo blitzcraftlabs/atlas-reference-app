@@ -10,7 +10,7 @@ This repository was generated from the **published npm package**:
 pnpm dlx @blitzcraftlabs/atlas@1.1.0 init atlas-reference-app
 ```
 
-**Atlas baseline:** `1.1.0` (`atlas.config.json`).
+**Atlas baseline:** `1.3.3` (`atlas.config.json`). Generated from 1.1.0 and upgraded with `atlas upgrade`.
 
 ## Live deployment
 
@@ -34,7 +34,7 @@ pnpm --filter @atlas/web start
 ## Validation
 
 ```bash
-pnpm dlx @blitzcraftlabs/atlas@1.1.0 doctor
+pnpm atlas doctor
 pnpm lint && pnpm typecheck && pnpm test && pnpm build
 ```
 

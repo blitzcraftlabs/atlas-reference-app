@@ -16,7 +16,7 @@ Git commit on main (https://github.com/blitzcraftlabs/atlas-reference-app)
 | Platform | Vercel (`blitzcraftlabs` team) |
 | Project | `atlas-reference-app` |
 | Production URL | https://atlas-reference-app.vercel.app |
-| Atlas baseline | `1.1.0` (from `atlas.config.json`) |
+| Atlas baseline | `1.3.3` (from `atlas.config.json`) |
 | Monorepo app root | `apps/web` |
 | Install | `cd ../.. && pnpm install` |
 | Build | `cd ../.. && pnpm build --filter @atlas/web` |
@@ -42,7 +42,7 @@ Record the live Git SHA from `/api/health` (`gitSha` field). Vercel sets `VERCEL
 
 1. **Git commit SHA** — canonical source revision (`gitSha` in `/api/health` when provided).
 2. **Vercel deployment ID** — `VERCEL_DEPLOYMENT_ID` / deployment URL (`dpl_…`).
-3. **Atlas baseline** — `platform.baseline.atlasVersion` in `atlas.config.json` (`1.1.0`).
+3. **Atlas baseline** — `platform.baseline.atlasVersion` in `atlas.config.json` (`1.3.3`).
 
 ## Consumer note (Vercel + Atlas scaffold)
 
