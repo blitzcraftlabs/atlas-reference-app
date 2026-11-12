@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "platform": {
     "baseline": {
-      "atlasVersion": "1.2.0",
+      "atlasVersion": "1.2.1",
       "contractSchemaVersion": 1,
       "templateManifestSchemaVersion": 1,
       "syncedPathChecksums": {
@@ -92,14 +92,14 @@
         "src/lib/security/README.md": "sha256:4743ad0012329009dc32cc23be24489290e702eead65e5e586da0970f7bc6a60",
         "src/lib/security/redact.ts": "sha256:fe1513bc515feb5624b1a8ad1ba6fd2ddd52bfaa7428ba92a262d84917ef2486",
         "src/lib/telemetry/__tests__/config.test.ts": "sha256:ac90bc0daff7456e702dd88340ba3194963eb1ac8ebe7d50a0c955c990ecbe47",
-        "src/lib/telemetry/__tests__/types.test.ts": "sha256:4cec17b4921b7680be2d90bbbc140e0fae1cdfd67ace939f11b8438ed2f3d0f3",
+        "src/lib/telemetry/__tests__/types.test.ts": "sha256:b598e4e73ad83e2176a1ef41b34f842d6f47ef3249fefa129fd764371aea57ea",
         "src/lib/telemetry/__tests__/validation.test.ts": "sha256:715e8fc5561ce28c3f574b29c01b05897767c1c54a8d4562b139f8929f180ff5",
         "src/lib/telemetry/config.ts": "sha256:03eb29961928017dd609d7993c4fe2870048d226212f93efd3e41038bba10328",
         "src/lib/telemetry/index.ts": "sha256:d8a27dd4ee6e911dd188cba2a287589beda2a5caca2ab174e9ee94db40cf1a82",
         "src/lib/telemetry/README.md": "sha256:387c6e9fd1a2ab094e5949a77e894b7eb1bca135aa8e3a8379e20712b857d402",
         "src/lib/telemetry/TESTING.md": "sha256:a9a0dfd507ecba095661cd518c2a5fbecb228f62aa31c553028ec1411e195c4d",
         "src/lib/telemetry/transport.ts": "sha256:bc8f587514e69438fcd7631fc6aa0ae49ed1f34537cfa4dcb7ee358590bbfd86",
-        "src/lib/telemetry/types.ts": "sha256:3502a4dbf51b3ef4203b03c7a7317d3163c567c361ab20d7018500f5787a1722",
+        "src/lib/telemetry/types.ts": "sha256:6fb47bd2ee9ce4d7b6d6a13d427b5a61799dcc662ac98f69e2d8bbbae849a6e2",
         "src/lib/telemetry/validation.ts": "sha256:0ae2bcdc724feec64329d8fc1f277e47eb9f34c9f4e4631b6b489a70409a278f",
         "src/providers/__tests__/analytics-provider.test.tsx": "sha256:3377e44c5da07d8210773446d9ee7fe87bea4fe67157a7036e6f60ab1bd9bc6d",
         "src/providers/__tests__/consent-bridge.test.tsx": "sha256:2fb962ed7473c9f4d59af1f87f61dcbbe7f78d6bb8545069d6093ba6e0417979",
@@ -117,6 +117,10 @@
         "src/schemas/env/server-runtime-config.ts": "sha256:e89e06140743b1a2fce777b7c9eefd4270fcc0528492355f6b02a7e5908eb11c",
         "src/schemas/env/validate-server-env.test.ts": "sha256:fc6a11bcf3307b6320ece185d307338931b42db16b8e381d29a107308670d099",
         "src/schemas/env/validate-server-env.ts": "sha256:bfba5751663850363c920ea32a3a25ab1f385c82bfa20efbbb780efd2676286b"
+      },
+      "repositorySyncedPathChecksums": {
+        ".dockerignore": "sha256:630ef8df018bc8bed27cc33e4fb20f894758ffbc107e84f6d8b475a04ed6414a",
+        "Dockerfile": "sha256:f39de11442ecb159d6b8d4179d3e8d08c16e0dd132e87aa30cc11ddd7941944f"
       }
     }
   }
