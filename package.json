@@ -1,6 +1,6 @@
 {
   "name": "atlas-reference-app",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "license": "Apache-2.0",
   "description": "Atlas application generated from Atlas 1.1.0",
