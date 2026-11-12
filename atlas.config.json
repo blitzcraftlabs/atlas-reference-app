@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "platform": {
     "baseline": {
-      "atlasVersion": "1.1.0",
+      "atlasVersion": "1.2.0",
       "contractSchemaVersion": 1,
       "templateManifestSchemaVersion": 1,
       "syncedPathChecksums": {
@@ -114,8 +114,8 @@
         "src/providers/toaster-provider.tsx": "sha256:738ecce302fcb7fce1b3a11f000957bd1cfa0845ce4b7cf058da4df4eedb5fa3",
         "src/schemas/env/__tests__/public-runtime-config.test.ts": "sha256:c9650ad484b06b82c98d8f16522c63a2850bc6db302c736b79d98e55369412a6",
         "src/schemas/env/public-runtime-config.ts": "sha256:1c66a41abe9ed979ed1255df1077f0581e862e27c5fac135dbc7e50ae04ac72c",
-        "src/schemas/env/server-runtime-config.ts": "sha256:497cfb4099696cbe84b3896c852c254c40133c4363a80ba19e94a81c7058f64f",
-        "src/schemas/env/validate-server-env.test.ts": "sha256:d270066c007e49d464e8c39d736ecdd388c1ecbbed768fc0b9255ad0b60a80c6",
+        "src/schemas/env/server-runtime-config.ts": "sha256:e89e06140743b1a2fce777b7c9eefd4270fcc0528492355f6b02a7e5908eb11c",
+        "src/schemas/env/validate-server-env.test.ts": "sha256:fc6a11bcf3307b6320ece185d307338931b42db16b8e381d29a107308670d099",
         "src/schemas/env/validate-server-env.ts": "sha256:bfba5751663850363c920ea32a3a25ab1f385c82bfa20efbbb780efd2676286b"
       }
     }
